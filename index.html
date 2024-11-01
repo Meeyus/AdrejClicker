@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babiš Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+
+    <header>
+        <h1>Babiš Clicker</h1>
+        <p>Kolikrát dokážeš kliknout na Babiše?</p>
+    </header>
+
+    <main>
+        <!-- Ikona pro vypnutí zvuku -->
+        <div id="mute-container" style="position: absolute; top: 10px; right: 10px; cursor: pointer; text-align: center;">
+            <img src="https://i.imgur.com/Ov2Tblm.png" alt="Mute" id="mute-icon" style="width: 50px; height: auto;">
+            <div style="font-size: 12px; color: red;">Ztlumit audio</div> <!-- Text pod ikonou -->
+        </div>
+
+        <!-- Obrázek pro klikání -->
+        <img src="https://i.imgur.com/Ov2Tblm.png" alt="Andrej Babiš" id="klikaci-obrazek" style="cursor: pointer;">
+
+        <!-- Skóre -->
+        <p>Skóre: <span id="score">0</span></p>
+
+        <!-- Leaderboard -->
+        <h2>Leaderboard - Nejvyšší skóre</h2>
+        <ul id="leaderboard"></ul>
+
+        <!-- Zvuk "Sorry jako" při kliknutí -->
+        <audio id="sorry-sound" src="sorryjako.wav"></audio>
+
+        <button onclick="resetScore()">Reset</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
